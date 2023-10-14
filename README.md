@@ -46,9 +46,13 @@ Foody hosts two primary actors: unregistered/non-logged users and registered/log
 
 All test cases created for the Foody web application are documented in the 'Test Cases' directory of this repository. Each test case is designed to validate a specific functionality or use case described in the SRS document.
 
+[Test Cases](https://github.com/SimeonSavov/FoodyWebApp_Testing/tree/main/TestCases)
+
 ### Bug Tracking
 
-Any bugs or issues identified during the testing process are logged and tracked in the 'Bug Tracker' directory of this repository. Each bug report includes detailed information about the issue, steps to reproduce it.
+Any bugs or issues identified during the testing process are logged and tracked in the 'Bug Reports' directory of this repository. Each bug report includes detailed information about the issue, steps to reproduce it.
+
+[Bug Reports](https://github.com/SimeonSavov/FoodyWebApp_Testing/tree/main/BugReports)
 
 ## API Testing with Postman
 
@@ -73,6 +77,7 @@ The following API queries and endpoints are supported:
 ### Foody API Tasks: Postman Requests
 
 Your task is to write API requests with Postman for certain RESTful API endpoints. You should organize your requests in a collection.
+[API](https://github.com/SimeonSavov/FoodyWebApp_Testing/tree/main/API)
 
 1. **Log in to the API**
     - Send a POST request with your username and password, created in the Foody Web App. After a successful request, you will receive your access token as part of the response body. Use this token as a Bearer Token in the Authorization section for the following requests.
