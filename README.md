@@ -49,3 +49,42 @@ All test cases created for the Foody web application are documented in the 'Test
 ### Bug Tracking
 
 Any bugs or issues identified during the testing process are logged and tracked in the 'Bug Tracker' directory of this repository. Each bug report includes detailed information about the issue, steps to reproduce it.
+
+## API Testing with Postman
+
+This section provides information about API testing of the Foody Web Application. It will guide you on how to interact with the Foody API using Postman.
+
+### API Queries
+
+The following API queries and endpoints are supported:
+
+1. **User**
+    - **POST /api/User/Create:** Create a new user by sending a JSON object in the request body with attributes like `"userName"`, `"firstName"`, `"midName"`, `"lastName"`, `"email"`, `"password"`, and `"rePassword"`.
+    - **POST /api/User/Authentication:** Log in an existing user by sending a JSON object in the request body with `"userName"` and `"password"`. When a user logs in, the response format is a JSON object with an `"accessToken"` field, which is essential for all food requests.
+
+2. **Food**
+   All of the following requests require authorization.
+    - **GET /api/Food/All:** List all foods (empty request body).
+    - **GET /api/Food/Search:** Search for foods by their name using a query parameter like `?keyword=foodName`.
+    - **POST /api/Food/Create:** Create a new food by sending a JSON object in the request body with attributes `"name"`, `"description"`, and `"url"`.
+    - **PATCH /api/Food/Edit/foodId:** Change the title of an existing food using a JSON object with the path and value to replace.
+    - **DELETE /api/Food/Delete/foodId:** Delete an existing food.
+
+### Foody API Tasks: Postman Requests
+
+Your task is to write API requests with Postman for certain RESTful API endpoints. You should organize your requests in a collection.
+
+1. **Log in to the API**
+    - Send a POST request with your username and password, created in the Foody Web App. After a successful request, you will receive your access token as part of the response body. Use this token as a Bearer Token in the Authorization section for the following requests.
+
+2. **Create a New Food**
+    - Send a POST request with attributes required for creating a new food. The JSON body should include `"name"`, `"description"`, and `"url"`. The URL attribute is not mandatory, meaning you can create a food only with a title and description. If you decide to use the URL attribute, ensure it points to a picture format or leave it blank.
+
+3. **Search for the Food You Created**
+    - Send a GET request to search for the food you just created by its title.
+
+4. **Change the Title of the Food You Created**
+    - Send a PATCH request with the attributes needed to replace the title of the food you created.
+
+5. **Delete Food**
+    - Send a DELETE request with the attributes required to delete the food you just patched.
